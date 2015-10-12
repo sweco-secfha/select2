@@ -1833,6 +1833,10 @@ S2.define('select2/selection/search',[
           self.searchRemoveChoice(item);
 
           evt.preventDefault();
+
+          window.setTimeout(function () {
+            self.$search.val('').blur().focus();
+          }, 0);
         }
       }
     });
